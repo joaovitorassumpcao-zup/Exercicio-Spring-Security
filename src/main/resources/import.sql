@@ -1,0 +1,10 @@
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('A Viagem do Destino', '2023-07-15', 'Laura Santos', 'BOOK001');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('O Mistério das Sombras', '2023-06-25', 'David Costa', 'BOOK002');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('O Enigma do Tempo', '2023-05-18', 'Isabel Fernandes', 'BOOK003');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('A Profecia Perdida', '2023-04-05', 'Lucas Mendes', 'BOOK004');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('O Segredo do Labirinto', '2023-03-10', 'Juliana Silva', 'BOOK005');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('O Despertar das Estrelas', '2023-02-22', 'Rafael Almeida', 'BOOK006');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('A Magia da Lua Cheia', '2023-01-12', 'Carolina Oliveira', 'BOOK007');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('Aventuras no Reino Encantado', '2022-12-28', 'André Santos', 'BOOK008');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('O Tesouro Esquecido', '2022-11-09', 'Sofia Mendonça', 'BOOK009');
+INSERT INTO tb_biblioteca (nome, data_lancamento, autor, codigo) VALUES ('A Busca pelo Portal Mágico', '2022-10-14', 'Gabriel Fernandes', 'BOOK010');
