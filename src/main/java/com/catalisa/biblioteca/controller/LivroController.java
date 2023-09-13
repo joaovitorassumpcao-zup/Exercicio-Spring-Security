@@ -1,6 +1,6 @@
 package com.catalisa.biblioteca.controller;
 
-import com.catalisa.biblioteca.model.Livro;
+import com.catalisa.biblioteca.model.LivroModel;
 import com.catalisa.biblioteca.service.LivroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,15 +16,15 @@ public class LivroController {
     @Autowired
     LivroService livroService;
     @GetMapping
-    public List<Livro> listar(){
+    public List<LivroModel> listar(){
 
         return  livroService.listar();
 
     }
     @GetMapping(path = "/{id}")
-    public ResponseEntity<Livro> buscar(@PathVariable Long id){
+    public ResponseEntity<LivroModel> buscar(@PathVariable Long id){
 
-        Optional<Livro> livro = livroService.buscar(id);
+        Optional<LivroModel> livro = livroService.buscar(id);
         if(livro.isPresent()){
 
             return ResponseEntity.ok(livro.get());
@@ -36,15 +36,15 @@ public class LivroController {
     }
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Livro adicionar(@RequestBody Livro livro){
+    public LivroModel adicionar(@RequestBody LivroModel livro){
         return livroService.salvar(livro);
 
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Livro> atualizar(@PathVariable Long id, @RequestBody Livro livro) {
+    public ResponseEntity<LivroModel> atualizar(@PathVariable Long id, @RequestBody LivroModel livro) {
 
-        Optional<Livro> livroAtual = livroService.alterar(livro, id);
+        Optional<LivroModel> livroAtual = livroService.alterar(livro, id);
         if (livroAtual.isPresent()) {
 
             return ResponseEntity.ok().build();

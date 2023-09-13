@@ -7,11 +7,11 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@Table(name = "tb_biblioteca")
-public class Livro {
+@Table(name = "TB_LIVRO")
+public class LivroModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_livro;
 
     @Column(length = 50, nullable = false)
     private String nome;

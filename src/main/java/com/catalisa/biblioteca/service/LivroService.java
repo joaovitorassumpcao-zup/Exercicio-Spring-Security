@@ -1,6 +1,6 @@
 package com.catalisa.biblioteca.service;
 
-import com.catalisa.biblioteca.model.Livro;
+import com.catalisa.biblioteca.model.LivroModel;
 import com.catalisa.biblioteca.repository.LivroRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,27 +21,27 @@ public class LivroService {
     @Autowired
     LivroRepository livroRepository;
 
-    public List<Livro> listar() {
+    public List<LivroModel> listar() {
 
         return livroRepository.findAll();
 
     }
 
-    public Optional<Livro> buscar(Long id) {
+    public Optional<LivroModel> buscar(Long id) {
 
         return livroRepository.findById(id);
 
     }
 
-    public Livro salvar(Livro livro) {
+    public LivroModel salvar(LivroModel livro) {
 
         return livroRepository.save(livro);
 
     }
 
-    public Optional<Livro> alterar(Livro livro, Long id) {
+    public Optional<LivroModel> alterar(LivroModel livro, Long id) {
 
-        Optional<Livro> livroAtual = buscar(id);
+        Optional<LivroModel> livroAtual = buscar(id);
 
         if (livroAtual.isPresent()) {
 
